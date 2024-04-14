@@ -11,3 +11,7 @@ class Solution:
         result = pow(N, reverse_N, (10**9) + 7)
         
         return result
+"""
+1.Used slicing method to reverse the digit
+2.Pow function= pow(a,b,modulus)
+"""
