@@ -1,0 +1,13 @@
+class Solution:
+    #Complete this function
+    def power(self,N,R):
+        #Your code here
+        N = int(N)
+        
+        # Reverse the digits of the number
+        reverse_N = int(str(N)[::-1])
+        
+        # Calculate the result: N^reverse_N mod (10^9 + 7)
+        result = pow(N, reverse_N, (10**9) + 7)
+        
+        return result
