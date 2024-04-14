@@ -1,0 +1,15 @@
+class Solution:
+    def getLastDigit(self, a, b):
+        # code here 
+        a=int(a)
+        b=int(b)
+        if a==0:
+            return 0
+        elif b==0:
+            return 1
+        if b%4==0:
+            res=4
+        else:
+            res=b%4
+        n=pow(a,res)
+        return n%10
