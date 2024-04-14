@@ -6,3 +6,7 @@ class Solution:
 		reverse=reverse.lstrip('0')
 		reverse=int(reverse)
 		return reverse
+"""
+1.used leftstrip to remove zero
+2.'' This is a separator. .join is used to concate the string without any space
+"""
