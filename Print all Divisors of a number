@@ -1,0 +1,9 @@
+from typing import List
+
+def printDivisors(n: int) -> List[int]:#this arrow denotes that return value should be list of integers
+    # Write your code here
+    divisors=[]
+    for i in range(1,n+1):
+        if n%i==0:
+            divisors.append(i)
+    return divisors
