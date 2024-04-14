@@ -1,0 +1,8 @@
+class Solution:
+	def reverse_digit(self, n):
+		# Code here
+		n=str(n)
+		reverse = ''.join(reversed(n))
+		reverse=reverse.lstrip('0')
+		reverse=int(reverse)
+		return reverse
