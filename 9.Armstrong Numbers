@@ -1,0 +1,14 @@
+import math
+class Solution:
+    def armstrongNumber (self, n):
+        # code here 
+        n=str(n)
+        a=n[0:4:1]
+        b=a[0]
+        c=a[1]
+        d=a[2]
+        e=pow(int(b),3)+pow(int(c),3)+pow(int(d),3)
+        if(e==int(n)):
+            return("Yes")
+        else:
+            return("No")
