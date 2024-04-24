@@ -1,0 +1,19 @@
+class Solution:
+    def isPrime (self, N):
+        # code here
+        count=0
+        if(N<=1):
+            return 0
+        for i in range(1,int(N**0.5)+1):  
+            if(N%i==0):
+                count+=1
+        if(count==1):
+            return 1
+        else:
+            return 0
+"""
+In for loop, the range is between 1 to square root +1, plus 1 is added because the end limit exclusive
+The reason we only need to check up to the square root of N is that if N has any divisors larger than its square root, it would also have a corresponding divisor smaller than its square root. Checking up to the square root is sufficient to determine if N is prime.
+
+For instance, if N is 16, its divisors are 1, 2, 4, 8, and 16. Notice that the divisors greater than the square root (which is 4) correspond to divisors smaller than the square root. Thus, there's no need to check beyond the square root of N.
+"""
