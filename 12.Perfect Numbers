@@ -1,0 +1,16 @@
+class Solution:
+    def isPerfectNumber(self, N):
+        # code here
+        sum = 1
+     
+    # Find all divisors and add them
+        i = 2
+        while i * i <= N:
+            if N % i == 0:
+                sum = sum + i + N/i
+            i += 1
+     
+    # If sum of divisors is equal to
+    # n, then n is a perfect number
+     
+        return (1 if sum == N and N!=1 else 0)
