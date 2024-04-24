@@ -1,0 +1,13 @@
+import math
+#Complete this function
+class Solution:
+    def floorSqrt(self, x): 
+    #Your code here
+        x =int(x)
+        y =x**0.5
+        for i in range(1,int(y)+1):
+            if(x==i*i):
+                return i
+            else:
+                return math.floor(y)
+    
