@@ -1,0 +1,7 @@
+a = 5
+b = 10
+
+# Swap using addition and subtraction
+a = a + b  # Now a is 15 (5 + 10)
+b = a - b  # Now b is 5 (15 - 10)
+a = a - b  # Now a is 10 (15 - 5)
