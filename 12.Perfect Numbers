@@ -1,16 +1,17 @@
 class Solution:
     def isPerfectNumber(self, N):
-        # code here
-        sum = 1
-     
-    # Find all divisors and add them
-        i = 2
-        while i * i <= N:
+        if N <= 1:
+            return 0  # 1 is not considered a perfect number
+        
+        sum_of_divisors = 1  # Start with 1 as it's a proper divisor
+        
+        # Iterate over possible divisors from 2 up to the square root of N
+        for i in range(2, int(N**0.5) + 1):
             if N % i == 0:
-                sum = sum + i + N/i
-            i += 1
-     
-    # If sum of divisors is equal to
-    # n, then n is a perfect number
-     
-        return (1 if sum == N and N!=1 else 0)
+                sum_of_divisors += i
+                if i != N // i:
+                    sum_of_divisors += N // i
+        
+        # Check if the sum of proper divisors equals N
+        return 1 if sum_of_divisors == N else 0
+
