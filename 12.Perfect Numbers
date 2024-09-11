@@ -9,8 +9,8 @@ class Solution:
         for i in range(2, int(N**0.5) + 1):
             if N % i == 0:
                 sum_of_divisors += i
-                if i != N // i:
-                    sum_of_divisors += N // i
+                if i != N // i:   #to remove double counting incase of perfect square
+                    sum_of_divisors += N // i   #This is to add the codivisor for example 28 = 14 and 2 are divisors
         
         # Check if the sum of proper divisors equals N
         return 1 if sum_of_divisors == N else 0
